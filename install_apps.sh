@@ -2,13 +2,13 @@
 
 # Update and upgrade
 sudo apt update
-sudo apt upgrade
+sudo apt upgrade -y
 
 # Git
-sudo apt install git
+sudo apt install git -y
 
 # Essentials
-sudo apt install build-essential
+sudo apt install build-essential -y
 
 # Visual Studio Code
 sudo apt update
@@ -19,12 +19,12 @@ sudo apt update
 sudo apt install code
 
 # ZSH
-sudo apt install zsh
+sudo apt install zsh -y
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install ./google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb -y
 
 # Sublime Text
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
@@ -35,17 +35,17 @@ sudo apt install sublime-text
 # Discord
 sudo apt install gdebi-core
 wget -O ~/discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
-sudo gdebi ~/discord.deb
+sudo gdebi ~/discord.deb -y
 
 # OBS
 sudo apt install obs-studio
 
 # VLC
-sudo apt install VLC
+sudo apt install VLC -y
 
 # Gnome tweaks
 sudo add-apt-repository universe
-sudo apt install gnome-tweak-tool
+sudo apt install gnome-tweak-tool -y
 sudo apt-get install chrome-gnome-shell
 
 # Icons EPapirus
@@ -54,7 +54,7 @@ sudo apt-get update
 sudo apt-get install papirus-icon-theme
 
 # Autoremove
-sudo apt autoremove
+sudo apt autoremove -y
 
 # CARLA Simulator
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1AF1527DE64CB8D9
