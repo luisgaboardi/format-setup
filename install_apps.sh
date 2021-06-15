@@ -43,16 +43,21 @@ sudo apt install obs-studio
 # VLC
 sudo apt install VLC
 
+# Gnome tweaks
+sudo add-apt-repository universe
+sudo apt install gnome-tweak-tool
+sudo apt-get install chrome-gnome-shell
+
+# Icons EPapirus
+sudo add-apt-repository ppa:papirus/papirus
+sudo apt-get update
+sudo apt-get install papirus-icon-theme
+
+# Autoremove
+sudo apt autoremove
+
 # CARLA Simulator
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1AF1527DE64CB8D9
 sudo add-apt-repository "deb [arch=amd64] http://dist.carla.org/carla $(lsb_release -sc) main"
 sudo apt update
 sudo apt install carla-simulator
-
-# Gnome tweaks
-sudo add-apt-repository universe
-sudo apt install gnome-tweak-tool
-# Applications adwaita-dark
-# Cursor dms-white
-# Icons EPapirus
-# Instalar dash to dock
