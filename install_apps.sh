@@ -80,6 +80,15 @@ sudo add-apt-repository ppa:papirus/papirus
 sudo apt-get update
 sudo apt-get install papirus-icon-theme
 
+# DroidCam
+cd /tmp/
+wget -O droidcam_latest.zip https://files.dev47apps.net/linux/droidcam_1.7.3.zip
+unzip droidcam_latest.zip -d droidcam
+cd droidcam && sudo ./install-client && sudo ./install-video
+
+# ADB devices
+sudo apt install adb
+
 # Autoremove
 sudo apt autoremove -y
 
