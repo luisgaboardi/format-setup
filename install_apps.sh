@@ -22,13 +22,6 @@ sudo apt install code
 sudo apt install zsh -y
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# Python MiniConda
-mkdir -p ~/miniconda3
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
-zsh ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-rm -rf ~/miniconda3/miniconda.sh
-~/miniconda3/bin/conda init zsh
-
 # Docker
 sudo apt-get remove docker docker-engine docker.io containerd runc
 sudo apt-get update
@@ -92,8 +85,10 @@ sudo apt install adb
 # Autoremove
 sudo apt autoremove -y
 
-# CARLA Simulator
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1AF1527DE64CB8D9
-sudo add-apt-repository "deb [arch=amd64] http://dist.carla.org/carla $(lsb_release -sc) main"
-sudo apt update
-sudo apt install carla-simulator
+# Node JS 14
+curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
+sudo bash nodesource_setup.sh
+sudo apt install nodejs
+
+# Angular CLI
+npm install -g @angular/cli
